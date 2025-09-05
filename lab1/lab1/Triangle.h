@@ -3,13 +3,14 @@
 #include "cmath"
 class Triangle
 {
-	unsigned int a = 0;
-	unsigned int b = 0;
-	unsigned int c = 0;
-	unsigned int angle = 0;
+	double side = 0;
+	double angle = 0;
 
+	double a = 0;
+	double b = 0;
+	double c = 0;
 public:
-	Triangle(unsigned int c_a, unsigned int c_b, unsigned int c_c) : a(c_a), b(c_b), c(c_c) {}
+	Triangle(double c_side, double c_angle) : side(c_side), angle(c_angle){}
 
 	// methods 
 
