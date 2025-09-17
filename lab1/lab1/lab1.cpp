@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include <format>
+#include <string>
 #include "Triangle.h"
 using namespace std;
 
@@ -11,7 +11,7 @@ int main()
 {
 	setlocale(LC_ALL, "RUS");
 	vector<Triangle> triangles;
-	unsigned int n, i;
+	unsigned int n, i, action, rk = 0;
 	double a;
 	double b;
 	double c;
@@ -27,13 +27,22 @@ int main()
 		cout << "Введите гипотенузу треугольника:\n";
 		cin >> c;
 		i++;
-
-	} while (n);
+		rk++;
+	} while (n>rk );
 	//printf();
 
+	do {
+		cout << "Выберите действие, которое необходимо выпонить: \n";
+		cout << R"(1. Увеличить размер стороны
+2. Уменьшить размер стороны.
+3. Вычислить радиус вписанной окружности.
+4. Определить расстояние между центрами вписанной и описанной окружностей.
+5. Вычислить квадратный корень из площади.
+6. Определить значение сторон.)";
+		cin >> action;
 
-
-	switch (n) {
+	} while (n);
+	switch (action) {
 
 	}
 	cout << "Выберите операцию:\n";
