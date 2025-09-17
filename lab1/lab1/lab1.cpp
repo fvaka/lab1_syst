@@ -3,48 +3,54 @@
 
 #include <iostream>
 #include <vector>
+#include <format>
 #include "Triangle.h"
+using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "RUS");
-    std::vector<Triangle> triangles;
-    unsigned int n;
-    double a;
-    double b;
-    double c;
-    std::cout << "Введите колличество прямоугольных треугольников в массиве:\n";
-    while (std::cin >> n) {
-    std::cout << "Введите первый катет треугольника:\n";
-    std::cin >> a;
-    std::cout << "Введите второй катет треугольника:\n";
-    std::cin >> b;
-    std::cout << "Введите гипотенузу треугольника:\n";
-    std::cin >> c;
+	setlocale(LC_ALL, "RUS");
+	vector<Triangle> triangles;
+	unsigned int n, i;
+	double a;
+	double b;
+	double c;
+	cout << "Введите колличество прямоугольных треугольников в массиве: ";
+	cin >> n;
+	i = n;
+	do{
+		cout << "Введите стороны для " + i << endl;
+		cout << "Введите первый катет треугольника:\n";
+		cin >> a;
+		cout << "Введите второй катет треугольника:\n";
+		cin >> b;
+		cout << "Введите гипотенузу треугольника:\n";
+		cin >> c;
+		i++;
+
+	} while (n);
+	//printf();
 
 
-    }
-    
+
+	switch (n) {
+
+	}
+	cout << "Выберите операцию:\n";
+	cout << "Выберите операцию:\n";
+	cout << "Выберите операцию:\n";
+	cout << "Выберите операцию:\n";
+	cout << "Выберите операцию:\n";
+	cout << "Выберите операцию:\n";
+	cout << "Выберите операцию:\n";
 
 
-    switch (n) {
+	//delete[] triangle;
 
-    }
-    std::cout << "Выберите операцию:\n";
-    std::cout << "Выберите операцию:\n";
-    std::cout << "Выберите операцию:\n";
-    std::cout << "Выберите операцию:\n";
-    std::cout << "Выберите операцию:\n";
-    std::cout << "Выберите операцию:\n";
-    std::cout << "Выберите операцию:\n";
+	//do {
+	//    cout << "Введите стороны прямоугольного треугольника:";
+	//    cin>>
 
-
-    //delete[] triangle;
-
-    //do {
-    //    std::cout << "Введите стороны прямоугольного треугольника:";
-    //    std::cin>>
-
-    //}while
+	//}while
 }
 

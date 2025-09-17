@@ -14,31 +14,12 @@ public:
 
 	// methods 
 
-	void Increase(unsigned int side, unsigned int percent) {
-		
-		// number to increase with 
-		int increaseNum = percent / 100 * side;
+	void Increase(unsigned int side, unsigned int percent);
+	void Decrease(unsigned int side, unsigned int percent);
+	double radiousCalc();
+	double squareFromAreaCalc(int a, double h);
 
-		side += increaseNum;
-	}
-	
-	void Decrease(unsigned int side, unsigned int percent) {
-		// number to decrease with 
-		int decreaseNum = percent / 100 * side;
-
-		side -= decreaseNum;
-	}
-
-	double radiousCalc() {
-		return (a+b-c)/2;
-	}
-	 
-	double squareFromAreaCalc(int a, double h) {
-		return std::sqrt((a, h) / 2);
-	}
-	
 
 
 
 };
-
