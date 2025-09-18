@@ -1,6 +1,4 @@
-﻿// lab1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
+﻿
 #include <iostream>
 #include <vector>
 #include <string>
@@ -11,55 +9,63 @@ int main()
 {
 	setlocale(LC_ALL, "RUS");
 	vector<Triangle> triangles;
+	Triangle tr;
 	unsigned int n, i, action, rk = 0;
 	double a;
 	double b;
 	double c;
-	cout << "Введите колличество прямоугольных треугольников в массиве: ";
+	double side;
+	double angle;
+	printf("Введите колличество прямоугольных треугольников в массиве: ");
 	cin >> n;
 	i = n;
-	do{
+	do {
 		cout << "Введите стороны для " + i << endl;
-		cout << "Введите первый катет треугольника:\n";
-		cin >> a;
-		cout << "Введите второй катет треугольника:\n";
-		cin >> b;
-		cout << "Введите гипотенузу треугольника:\n";
-		cin >> c;
+		cout << "Введите сторону прямоугольного треугольника:\n";
+		cin >> side;
+		cout << "Введите угол прямоугольного треугольника:\n";
+		cin >> angle;
 		i++;
 		rk++;
-	} while (n>rk );
+		tr = Triangle(side, angle);
+		triangles = { tr };
+	} while (n > rk);
 	//printf();
 
-	do {
+	//cout << tr;
+	do 
+	{
 		cout << "Выберите действие, которое необходимо выпонить: \n";
 		cout << R"(1. Увеличить размер стороны
 2. Уменьшить размер стороны.
 3. Вычислить радиус вписанной окружности.
 4. Определить расстояние между центрами вписанной и описанной окружностей.
 5. Вычислить квадратный корень из площади.
-6. Определить значение сторон.)";
+6. Определить значение сторон.)" << endl;
 		cin >> action;
 
 	} while (n);
+
+
 	switch (action) {
-
+	case 1:
+		tr.findAnotherSides(side, angle);
+		break;
+	case 2:
+		break;
+	case 3:
+		break;	
+	case 4:
+		break;	
+	case 5:
+		break;	
+	case 6:
+		break;
+	case 7:
+		break;
+	default:
+		break;
 	}
-	cout << "Выберите операцию:\n";
-	cout << "Выберите операцию:\n";
-	cout << "Выберите операцию:\n";
-	cout << "Выберите операцию:\n";
-	cout << "Выберите операцию:\n";
-	cout << "Выберите операцию:\n";
-	cout << "Выберите операцию:\n";
-
-
-	//delete[] triangle;
-
-	//do {
-	//    cout << "Введите стороны прямоугольного треугольника:";
-	//    cin>>
-
-	//}while
 }
+
 
